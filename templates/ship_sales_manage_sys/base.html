@@ -1,0 +1,41 @@
+{% load static%}
+
+{% load django_bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>錦果ファーム 販売管理システム</title>
+</head>
+<body class="w-100">
+    <header class="p-3 bg-success shadow">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none px-4">
+                <img src="{% static 'ship_sales_manage_sys/images/log_sys_no_back.png' %}" width="50" height="50">
+            </a>
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li class=""><a href="#" class="nav-link px-4 text-white">集計データ</a></li>
+              <li><a href="{% url 'ship_sales_manage_sys:ai' %}" class="nav-link px-4 text-white">売上予測AI</a></li>
+              <li><a href="#" class="nav-link px-4 text-white">売上入力</a></li>
+              <li><a href="#" class="nav-link px-4 text-white">通知</a></li>
+            </ul>
+
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control form-control-dark" placeholder="検索...">
+            </form>
+    
+            <div class="text-end">
+              <button type="button" class="btn btn-outline-light me-2">ログイン</button>
+              <button type="button" class="btn btn-warning">サインアップ</button>
+            </div>
+          </div>
+        </div>
+      </header>
+</body>
+</html>
